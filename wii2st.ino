@@ -81,8 +81,10 @@ Pin	Mouse/Joystick 0	Joystick 1
     /// Setup Atari pins as output
     pinMode(LED_PIN, OUTPUT);
     digitalWrite(LED_PIN, HIGH);
-    for(int pin=0; pin<ATARI_NBPINS; ++pin)
+    for(int pin=0; pin<ATARI_NBPINS; ++pin) {
       pinMode(ATARI_PIN1+pin, OUTPUT);
+      digitalWrite(ATARI_PIN1+pin, HIGH);
+    }
   
     if(Serial)
       Serial.println(F("Starting Wii to Atari-ST converter"));
@@ -121,6 +123,8 @@ Pin	Mouse/Joystick 0	Joystick 1
   
   int read_wii(void)
   {
+    delay(I2C_DELAY);
+
     byte buffer[6] = {0, 0, 0, 0, 0, 0};
     byte length = sizeof(buffer);
     for(byte nbytes=0; nbytes < length; )
@@ -128,10 +132,11 @@ Pin	Mouse/Joystick 0	Joystick 1
     
     m_changed = 0;
     for(int i=0; i<length; ++i) {
-      m_changed = m_changed || (buffer[i] != m_data[i]);
+      if(buffer[i] != m_data[i])
+        m_changed = 1;
       m_data[i] = buffer[i];
     }
-    
+
     if(m_changed && Serial) {
       Serial.print(F("Data: "));
       for(int i=0; i<length; ++i)
@@ -152,11 +157,11 @@ Pin	Mouse/Joystick 0	Joystick 1
   {
     if(! m_changed)
       return 1;
-      
+    
     short flags = ~(m_data[4] << 8 | m_data[5]);
     for(int pin=0; pin<ATARI_NBPINS; ++pin) {
       bool level = (flags & m_joy_masks[pin]);
-      digitalWrite(ATARI_PIN1+pin, level ? HIGH : LOW);
+      digitalWrite(ATARI_PIN1+pin, level ? LOW : HIGH);
     }
 
     /// No errors
@@ -165,7 +170,19 @@ Pin	Mouse/Joystick 0	Joystick 1
   
   void handle_serial()
   {
-    delay(1);
+    if(! m_changed) {
+      return;
+    }
+      
+    short flags = ~(m_data[4] << 8 | m_data[5]);
+    for(int pin=0; pin<ATARI_NBPINS; ++pin) {
+      bool level = (flags & m_joy_masks[pin]);
+      if(level)
+        Serial.print(F(" X "));
+      else
+        Serial.print(F(" - "));
+    }
+    Serial.println();
   }
   
 private:  
@@ -194,7 +211,7 @@ private:
 
   static int const LED_PIN = 13;  
 
-  static int const I2C_DELAY = 1;
+  static int const I2C_DELAY = 13;
 
   /// Holds an I2C bus interface
   twi& m_bus;
