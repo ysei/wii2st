@@ -72,8 +72,8 @@ Pin	Mouse/Joystick 0	Joystick 1
     m_joy_masks[2] = JOY_LEFT;
     m_joy_masks[3] = JOY_RIGHT;
     m_joy_masks[4] = 0;
-    m_joy_masks[5] = JOY_Y;
-    m_joy_masks[6] = JOY_X;
+    m_joy_masks[5] = JOY_Y | JOY_B;
+    m_joy_masks[6] = JOY_X | JOY_A;
   }
 
   int begin()
