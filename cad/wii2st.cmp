@@ -1,0 +1,73 @@
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 30/07/2013 21:54:17
+
+BeginCmp
+TimeStamp = /51F81021;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F8101F;
+Reference = D2;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F8101D;
+Reference = D3;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F8101A;
+Reference = D4;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F81015;
+Reference = D5;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F8100A;
+Reference = D6;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F80F45;
+Reference = J1;
+ValeurCmp = DB9;
+IdModule  = DB9FC;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F80DED;
+Reference = LV1;
+ValeurCmp = LEVEL_CONVERTER;
+IdModule  = DIP-10__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F80FA7;
+Reference = P1;
+ValeurCmp = CONN_3X2;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /51F80DD9;
+Reference = U1;
+ValeurCmp = ARDUINO_DUEMILANOVE;
+IdModule  = DIP-24__600_ELL;
+EndCmp
+
+EndListe

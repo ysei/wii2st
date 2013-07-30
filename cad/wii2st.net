@@ -1,0 +1,118 @@
+# EESchema Netlist Version 1.1 created  30/07/2013 21:54:17
+(
+ ( /51F81021 D3 D1 DIODE
+  ( 1 N-000011 )
+  ( 2 N-000021 )
+ )
+ ( /51F8101F D3 D2 DIODE
+  ( 1 N-000003 )
+  ( 2 N-000023 )
+ )
+ ( /51F8101D D3 D3 DIODE
+  ( 1 N-000012 )
+  ( 2 N-000025 )
+ )
+ ( /51F8101A D3 D4 DIODE
+  ( 1 N-000009 )
+  ( 2 N-000026 )
+ )
+ ( /51F81015 D3 D5 DIODE
+  ( 1 N-000001 )
+  ( 2 N-000028 )
+ )
+ ( /51F8100A D3 D6 DIODE
+  ( 1 N-000007 )
+  ( 2 N-000029 )
+ )
+ ( /51F80F45 DB9FC J1 DB9
+  ( 1 N-000011 )
+  ( 2 N-000003 )
+  ( 3 N-000012 )
+  ( 4 N-000009 )
+  ( 5 ? )
+  ( 6 N-000001 )
+  ( 7 Vcc )
+  ( 8 Gnd )
+  ( 9 N-000007 )
+ )
+ ( /51F80DED DIP-10__300 LV1 LEVEL_CONVERTER
+  ( 0 N-000014 )
+  ( 1 ? )
+  ( 2 N-000034 )
+  ( 3 Gnd )
+  ( 4 ? )
+  ( 5 N-000040 )
+  ( 6 N-000039 )
+  ( 7 ? )
+  ( 8 Gnd )
+  ( 9 Vcc )
+  ( 10 ? )
+  ( 11 N-000036 )
+ )
+ ( /51F80FA7 DIP-6__300 P1 CONN_3X2
+  ( 1 Gnd )
+  ( 2 N-000014 )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 N-000040 )
+  ( 6 N-000034 )
+ )
+ ( /51F80DD9 DIP-24__600_ELL U1 ARDUINO_DUEMILANOVE
+  ( 0 ? )
+  ( 1 N-000034 )
+  ( 2 Vcc )
+  ( 3 Gnd )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 N-000036 )
+  ( 10 N-000039 )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 N-000021 )
+  ( 14 N-000023 )
+  ( 15 N-000025 )
+  ( 16 N-000026 )
+  ( 17 ? )
+  ( 18 N-000028 )
+  ( 19 N-000029 )
+  ( 20 ? )
+  ( 21 ? )
+  ( 22 ? )
+  ( 23 ? )
+  ( 24 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ S*
+$endlist
+$component D4
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
+$component D6
+ D?
+ S*
+$endlist
+$component J1
+ DB9*
+$endlist
+$endfootprintlist
+}

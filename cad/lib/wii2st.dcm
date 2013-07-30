@@ -1,3 +1,13 @@
-EESchema-DOCLIB  Version 2.0  Date: 29/07/2013 21:56:07
+EESchema-DOCLIB  Version 2.0  Date: 30/07/2013 21:05:54
+#
+$CMP ARDUINO_DUEMILANOVE
+D Arduino Duemilanove
+K Arduino
+$ENDCMP
+#
+$CMP LEVEL_CONVERTER
+D SparkFun Level Converter
+K Sparkfun, Level converter
+$ENDCMP
 #
 #End Doc Library
